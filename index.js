@@ -6,16 +6,17 @@ const WebSocketClient = require('./ws-client').WebSocketClient;
 const exec = require('child_process').exec;
 
 const port = process.env.PORT || 3006;
+console.log('here\'s the WS_URL:', process.env.WS_URL);
 const lymidUrl = process.env.WS_URL || 'ws://localhost:3005';
 // WS_URL=ws://10.0.2.2:3005 node index
 // let ws = new WebSocket(lymidUrl);
 var wsc = new WebSocketClient();
 
 const doSomething = () => {
-  const addX = exec('chmod 774 start.bash', (err, stdout, stderr) => {
-    if (err) {console.log(err); }
-    console.log(stdout);
-  });
+  // const addX = exec('chmod 774 start.bash', (err, stdout, stderr) => {
+  //   if (err) {console.log(err); }
+  //   console.log(stdout);
+  // });
   const runX = exec('./start.bash', (err, stdout, stderr) => {
     if (err) {console.log(err); }
     console.log(stdout);
