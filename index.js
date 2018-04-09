@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const app = require('express')();
 const server = require('http').Server(app);
 // const WebSocket = require('ws');
@@ -6,6 +7,7 @@ const exec = require('child_process').exec;
 
 const port = process.env.PORT || 3006;
 const lymidUrl = process.env.WS_URL || 'ws://localhost:3005';
+// WS_URL=ws://10.0.2.2:3005 node index
 // let ws = new WebSocket(lymidUrl);
 var wsc = new WebSocketClient();
 
