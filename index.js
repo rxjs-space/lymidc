@@ -14,17 +14,24 @@ const doSomething = () => {
     if (err) {console.log(err); }
     console.log(stdout);
   });
-  const dir = exec("ls -la", function(err, stdout, stderr) {
-    if (err) {
-      // should have err.code here?  
-    }
+  const runX = exec('./start.bash', (err, stdout, stderr) => {
+    if (err) {console.log(err); }
     console.log(stdout);
   });
-  
-  dir.on('exit', function (code) {
+  runX.on('exit', (code) => {
     console.log(code);
-    // exit code is code
   });
+  // const dir = exec("ls -la", function(err, stdout, stderr) {
+  //   if (err) {
+  //     // should have err.code here?  
+  //   }
+  //   console.log(stdout);
+  // });
+  
+  // dir.on('exit', function (code) {
+  //   console.log(code);
+  //   // exit code is code
+  // });
 };
 
 
