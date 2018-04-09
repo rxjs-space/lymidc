@@ -5,7 +5,7 @@ const WebSocketClient = require('./ws-client').WebSocketClient;
 const exec = require('child_process').exec;
 
 const port = process.env.PORT || 3006;
-const lymidUrl = 'ws://localhost:3005';
+const lymidUrl = process.env.WS_URL || 'ws://localhost:3005';
 // let ws = new WebSocket(lymidUrl);
 var wsc = new WebSocketClient();
 
