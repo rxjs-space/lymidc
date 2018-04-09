@@ -13,11 +13,11 @@ const lymidUrl = process.env.WS_URL || 'ws://localhost:3005';
 var wsc = new WebSocketClient();
 
 const doSomething = () => {
-  // const addX = exec('chmod 774 start.bash', (err, stdout, stderr) => {
-  //   if (err) {console.log(err); }
-  //   console.log(stdout);
-  // });
-  const runX = exec('/bin/ls -la', (err, stdout, stderr) => {
+  const addX = exec('/bin/chmod 774 start.bash', (err, stdout, stderr) => {
+    if (err) {console.log(err); }
+    console.log(stdout);
+  });
+  const runX = exec('/bin/bash ./start.bash', (err, stdout, stderr) => {
     if (err) {console.log(err); }
     console.log(stdout);
   });
