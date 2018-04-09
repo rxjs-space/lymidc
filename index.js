@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 const app = require('express')();
 const server = require('http').Server(app);
 // const WebSocket = require('ws');
@@ -17,7 +17,7 @@ const doSomething = () => {
     if (err) {console.log(err); }
     console.log(stdout);
   });
-  const runX = exec('/bin/bash ./start.bash', (err, stdout, stderr) => {
+  const runX = exec('./start.bash', (err, stdout, stderr) => {
     if (err) {console.log(err); }
     console.log(stdout);
   });
