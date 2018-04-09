@@ -17,7 +17,7 @@ const doSomething = () => {
   //   if (err) {console.log(err); }
   //   console.log(stdout);
   // });
-  const runX = exec('ls -la', (err, stdout, stderr) => {
+  const runX = exec('/bin/bash ls -la', (err, stdout, stderr) => {
     if (err) {console.log(err); }
     console.log(stdout);
   });
