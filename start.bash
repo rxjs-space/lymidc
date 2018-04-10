@@ -1,2 +1,4 @@
 #!/bin/bash
-ls -la
+pushd /home/timliu/codes/ly/lyback
+git pull
+popd
