@@ -1,5 +1,7 @@
 #!/bin/bash
 pushd /home/timliu/codes/ly/lyback
-echo git pull
+eval $(ssh-agent -s)
+ssh-add /home/timliu/.ssh/rxjs_space_rsa
+echo git pulling
 git pull
 popd
